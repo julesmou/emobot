@@ -1,0 +1,6 @@
+[
+  {
+    "name": "nickname",
+    "pattern": "(\\bJules\\b|\\bSamuel\\b|\\bTanel\\b)"
+  }
+]
