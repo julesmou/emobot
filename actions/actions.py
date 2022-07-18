@@ -47,7 +47,7 @@ from twilio.rest import Client
 # importing the APIs
 from API.wikiapi import wiki_extract_summary_part
 from API.newsapi import news_from_subject_or_category, headlines_from_subject_or_category, just_news
-from actions.app import jules
+# from actions.app import jules
 import jinja2
 ALLOWED_TYPE_OF_CALL = ["facetime", "ft", "phone", "vocal"]
 ALLOWED_NICKNAME = ["Jules", "Jason", "Samuel", "Tanel", "Antony"]
@@ -121,9 +121,14 @@ class Nice_phone_call(Action):
         tracker: Tracker,
         domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         subject = next(tracker.get_latest_entity_values("personnality"), None)
-        # exec("../app.py")
-        jules
-        print("a fonctionné")
+        # exec("./actions/app.py")
+        app = Flask(__name__)
+        @app.route('/')
+        def index():
+            return render_template('/index.html', number= +33633829480)
+        chrome_path = 'open -a /Applications/Google\ Chrome.app %s'##Force à ouvrir sur Google Chrome par défaut
+        webbrowser.get(chrome_path).open("http://127.0.0.1:5000/")
+        print("a fonctionné ")
 
         return []
 

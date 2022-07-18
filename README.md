@@ -35,7 +35,7 @@ Here f658f0683fdc is the name of your docker container
 docker exec -ti rasa-virtualenv sh
 
 cd myproject
-
+pip install -r requirements.txt
 You now have opened an other shell into the same container
 
 you can then run whatever you want here : 
