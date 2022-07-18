@@ -1,7 +1,7 @@
 # Run rasa in docker container 
 
 this folder is the project folder
-the project files are hosted here but it is runned inside a docker container, the files are given to the container through a volume
+the project files are hosted here but it is runned inside a docker container, the files are given to the container through a volume  
 
 ## Run docker container and give it your files
 
